@@ -1,0 +1,11 @@
+{
+  "name": "Hackathon Project",
+  "version": "0.1",
+  "description": "Byron & Johnathan's hackathon project",
+  "permissions": ["storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2
+ }
