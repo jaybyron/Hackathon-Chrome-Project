@@ -21,7 +21,7 @@ $(document).ready(function() {
     let selectName = "<span>Name:</span><input type='text' class='night-element' id='selectName' name='name'size='10'>"
     $("#nightMode").append($(selectName));
 
-    let selectField = "<span>Property:</span><input type='text' class='night-element' id='selectCSS' name='name'size='10 '>"
+    let selectField = "<span>Property:</span><input type='text' class='night-element' id='selectCSS' name='name2'size='10'>"
     $("#nightMode").append($(selectField));
 
     let selectValue = "<span>Value:</span><input type='text' class='night-element' id='selectVal' name='name'size='10 '>"
@@ -77,8 +77,12 @@ $(document).ready(function() {
         let currVal = $('#selectVal').val();
         let selector = currSelector+currName;
 
-        alert(currCSS + ' ' + typeof(currCSS));
+        let obj = {};
+        obj[currCSS]=currVal;
+
+        alert(currCSS);
         $(selector).css({currCSS: currVal});
+       //$('#content').css({currCSS: "red"});
         
     })
 
