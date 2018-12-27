@@ -4,7 +4,7 @@ $(document).ready(function() {
     $("<div id ='nightMode'></div>" ).insertBefore($("body"));
     $("body").css('transform', 'translateY(50px)');
     $("#nightMode").append($("<button class='night-button night-element' id='night-button-1'>Nightmode 1 </button>"));
-    $("#nightMode").append($("<button class='night-button night-element' id='invert'>invert </button>"));
+   // $("#nightMode").append($("<button class='night-button night-element' id='invert'>invert </button>"));
     
 
     let dropdown = "<span>Text Properties:</span><select class='night-element' id='select-id' name='tags'><option value='h1'>H1</option><option value='h2'>H2</option><option value='h3'>H3</option><option value='h4'>H4</option><option value='h5'>H5</option><option value='h6'>H6</option><option value='p'>p</option><option value='a'>a</option></select>";
@@ -13,11 +13,27 @@ $(document).ready(function() {
     let dropDownField = "<input class='night-element' id='drop-down-input'type='number' value='16'   name='quantity' min='1'>"
     $("#nightMode").append($(dropDownField));
 
-    let colorField = "<span>Color</span><input class='night-element jscolor' id='jscolors' value='ab2567'></input>"
+    let colorField = "<span>Color:</span><input class='night-element jscolor' id='jscolors' value='ab2567'></input>"
     $("#nightMode").append($(colorField));
 
-    let selectField = "<span>Selector: </span><select class='night-element' id='select-field' name = 'tags' ><option value = '#'>ID</option><option value = '.'> class </option> </select>";
-    $("#nightmode").append($(selectField));
+    let selectorDropDown = "<span>Text Properties:</span><select class='night-element' id='selector-id' name='tags'><option value='#'>ID</option><option value='.'>CLASS</option></select>";
+    $("#nightMode").append($(selectorDropDown));
+
+    let selectName = "<span>Name:</span><input type='text' class='night-element' id='selectName' name='name'size='10'>"
+    $("#nightMode").append($(selectName));
+
+    let selectField = "<span>Property:</span><input type='text' class='night-element' id='selectCSS' name='name'size='10 '>"
+    $("#nightMode").append($(selectField));
+
+    let selectValue = "<span>Value:</span><input type='text' class='night-element' id='selectVal' name='name'size='10 '>"
+    $("#nightMode").append($(selectValue));
+    
+
+    let submitButton ="<button class='night-button night-element' id='select-submit'>UPDATE CSS </button>";
+    $("#nightMode").append($(submitButton));
+
+
+
 
 
     //FIRST BUTTON
@@ -52,8 +68,22 @@ $(document).ready(function() {
 
     })
      
-    $('#submitButton').on('click',function(){
 
+    $('#select-submit').on('click',function(){
+        let e = document.getElementById("selector-id");
+        let currSelector = e.options[e.selectedIndex].value;
+
+        let currName = $('#selectName').val();
+        let currCSS = $('#selectCSS').val();
+        let currVal = $('#selectVal').val();
+        let cssObj = {};
+        cssObj[currCSS] = currVal;
+        let cssString = JSON.stringify(cssObj);
+        let selector = currSelector+currName;
+
+        alert(currCSS + ' ' +selector + " " + cssString);
+        $(selector).css(JSON.parse(cssString));
+        
     })
 
     //HOVER FUNCTION
