@@ -9,8 +9,15 @@
     height: 30px!important;
     margin-bottom:50px;
     color:white;
+    padding-left:25px;
 
 
+}
+
+.night-button{
+    height:75%;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 .button{
