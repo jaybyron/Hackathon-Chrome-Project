@@ -6,6 +6,7 @@ $(document).ready(function() {
     $("#nightMode").append($("<button class='night-button night-element' id='night-button-1'>Nightmode 1 </button>"));
    // $("#nightMode").append($("<button class='night-button night-element' id='invert'>invert </button>"));
     
+
     let dropdown = "<span>Text Properties:</span><select class='night-element' id='select-id' name='tags'><option value='h1'>H1</option><option value='h2'>H2</option><option value='h3'>H3</option><option value='h4'>H4</option><option value='h5'>H5</option><option value='h6'>H6</option><option value='p'>p</option><option value='a'>a</option></select>";
     $("#nightMode").append($(dropdown));
 
@@ -73,16 +74,15 @@ $(document).ready(function() {
         let currSelector = e.options[e.selectedIndex].value;
 
         let currName = $('#selectName').val();
-        let currCSS = $('#selectCSS').val().toString();
+        let currCSS = $('#selectCSS').val();
         let currVal = $('#selectVal').val();
+        let cssObj = {};
+        cssObj[currCSS] = currVal;
+        let cssString = JSON.stringify(cssObj);
         let selector = currSelector+currName;
 
-        let obj = {};
-        obj[currCSS]=currVal;
-
-        alert(currCSS);
-        $(selector).css({currCSS: currVal});
-       //$('#content').css({currCSS: "red"});
+        alert(currCSS + ' ' +selector + " " + cssString);
+        $(selector).css(JSON.parse(cssString));
         
     })
 
