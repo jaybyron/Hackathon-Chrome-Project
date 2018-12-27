@@ -6,25 +6,29 @@
     top: 0;
     left: 0px!important;
     width: 100%!important;
-    height: 50px!important;
-    margin-bottom:50px;
+    height: 40px!important;
+    margin-bottom:40px;
     color:white;
     padding-left:25px;
+    padding-top:10px;
 
 
 }
 
+input[type=number]{
+    width: 50px;
+} 
+
+
 .night-button{
-    height:90% !important;
     margin-top:2px !important;
     margin-bottom:2px !important;
-    padding-left:20px !important;
-    padding-right:20px !important;
-    padding-top:5px!important;
-    padding-bottom:5px!important;
+    padding-left:10px !important;
+    padding-right:10px !important;
     background-color:#0B7FDB!important;
     color:white!important;
     font-size:12px !important;
+    border-radius: 5px;
 }
 
 .button{
@@ -34,4 +38,6 @@
 .night-element{
     margin-left:15px !important;
     margin-right:15px !important;
+    margin-top: auto;
+    margin-bottom auto;
 }
