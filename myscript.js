@@ -7,7 +7,7 @@ $(document).ready(function() {
    // $("#nightMode").append($("<button class='night-button night-element' id='invert'>invert </button>"));
     
 
-    let dropdown = "<span>Text Properties:</span><select class='night-element' id='select-id' name='tags'><option value='h1'>H1</option><option value='h2'>H2</option><option value='h3'>H3</option><option value='h4'>H4</option><option value='h5'>H5</option><option value='h6'>H6</option><option value='p'>p</option><option value='a'>a</option></select>";
+    let dropdown = "<span>Text Properties:</span><select class='night-element' id='select-id' name='tags'><option value ='null' >--</option> <option value='h1'>H1</option><option value='h2'>H2</option><option value='h3'>H3</option><option value='h4'>H4</option><option value='h5'>H5</option><option value='h6'>H6</option><option value='p'>p</option><option value='a'>a</option></select>";
     $("#nightMode").append($(dropdown));
 
     let dropDownField = "<input class='night-element' id='drop-down-input'type='number' value='16'   name='quantity' min='1'>"
