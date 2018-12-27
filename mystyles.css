@@ -1,0 +1,13 @@
+#coolStickyNav{
+    background-color: purple;
+    min-height: 40px!important;
+    z-index: 999999!important;
+    position: fixed!important;
+    top: 0;
+    left: 0px!important;
+    width: 100%!important;
+    height: 30px!important;
+    
+
+
+}
