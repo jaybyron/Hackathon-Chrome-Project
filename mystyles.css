@@ -6,7 +6,7 @@
     top: 0;
     left: 0px!important;
     width: 100%!important;
-    height: 40px!important;
+    height: 50px!important;
     margin-bottom:40px;
     color:white;
     padding-left:25px;
@@ -29,6 +29,8 @@ input[type=number]{
     color:white!important;
     font-size:12px !important;
     border-radius: 5px;
+    padding-top:5px;
+    padding-bottom:5px;
 }
 
 .button{
@@ -39,5 +41,9 @@ input[type=number]{
     margin-left:15px !important;
     margin-right:15px !important;
     margin-top: auto;
-    margin-bottom auto;
+    margin-bottom: auto;
+}
+
+#night-button-1{
+    background-color: #25367D !important;
 }

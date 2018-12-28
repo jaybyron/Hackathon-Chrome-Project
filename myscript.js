@@ -3,7 +3,6 @@ console.log('working');
 $(document).ready(function() {
     $("<div id ='nightMode'></div>" ).insertBefore($("body"));
     $("body").css('transform', 'translateY(50px)');
-    $("#nightMode").append($("<button class='night-button night-element' id='night-button-1'>Nightmode 1 </button>"));
    // $("#nightMode").append($("<button class='night-button night-element' id='invert'>invert </button>"));
     
 
@@ -16,7 +15,7 @@ $(document).ready(function() {
     let colorField = "<span>Color:</span><input class='night-element jscolor' id='jscolors' value='ab2567'></input>"
     $("#nightMode").append($(colorField));
 
-    let selectorDropDown = "<span>Text Properties:</span><select class='night-element' id='selector-id' name='tags'><option value='#'>ID</option><option value='.'>CLASS</option></select>";
+    let selectorDropDown = "<span>Text Properties:</span><select class='night-element' id='selector-id' name='tags'><option value='#'>ID</option><option value='.'>CLASS</option><option value=''>--</option></select>";
     $("#nightMode").append($(selectorDropDown));
 
     let selectName = "<span>Name:</span><input type='text' class='night-element' id='selectName' name='name'size='10'>"
@@ -29,8 +28,11 @@ $(document).ready(function() {
     $("#nightMode").append($(selectValue));
     
 
-    let submitButton ="<button class='night-button night-element' id='select-submit'>UPDATE CSS </button>";
+    let submitButton ="<button class='night-button night-element' id='select-submit'>Update CSS </button>";
     $("#nightMode").append($(submitButton));
+
+    $("#nightMode").append($("<button class='night-button night-element' id='night-button-1'>Night Mode </button>"));
+
 
 
 
@@ -63,7 +65,7 @@ $(document).ready(function() {
        let currColor = $(this).val();    
        let e = document.getElementById("select-id");
        let curr = e.options[e.selectedIndex].value;
-       console.log(curr);
+       //console.log(curr);
        $(curr).css({"color":"#"+currColor}); 
 
     })
@@ -81,7 +83,7 @@ $(document).ready(function() {
         let cssString = JSON.stringify(cssObj);
         let selector = currSelector+currName;
 
-        alert(currCSS + ' ' +selector + " " + cssString);
+        //alert(currCSS + ' ' +selector + " " + cssString);
         $(selector).css(JSON.parse(cssString));
         
     })
